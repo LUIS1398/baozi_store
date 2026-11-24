@@ -29,6 +29,7 @@ public class PedidoController {
 	// CADASTRAR PEDIDO
 	@PostMapping
 	public Pedido cadastrar(@RequestBody Pedido pedido) {
+		pedido.setId(null);
 		return pedidoRepository.save(pedido);
 	}
 	
