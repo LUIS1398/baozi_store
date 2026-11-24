@@ -29,6 +29,7 @@ public class ProdutoController {
 	// CADASTRAR PRODUTO
 	@PostMapping
 	public Produto cadastrar(@RequestBody Produto produto) {
+		produto.setId(null);
 		return produtoRepository.save(produto);
 		
 	}
